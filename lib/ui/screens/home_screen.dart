@@ -163,7 +163,8 @@ class HomeScreenAppbar extends StatelessWidget {
         return Column(
           children: [
             AppBar(
-              title: const Text('Hello Brenda!\nToday you have 9 tasks'),
+              title: Text(
+                  'Hello Brenda!\nToday you have ${(state is TaskLoadedState) ? state.todayCount : 0} tasks'),
               backgroundColor: Colors.transparent,
               elevation: 0,
               systemOverlayStyle: const SystemUiOverlayStyle(
